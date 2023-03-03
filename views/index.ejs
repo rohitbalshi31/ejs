@@ -1,0 +1,35 @@
+<%- include("layout/header")  %>
+    <main>
+        <form action="/" method="post">
+            <input type="text" placeholder="Enter a programming Language" name="plNames">
+            <button type="submit">Add Data</button>
+        </form>
+        <ul>
+            <!-- manual each one  -->
+            <!-- <li><%=plNames[0]  %></li>
+            <li><%=plNames[1]  %></li> -->
+            <!-- puting if else Condition -->
+           <!-- <% if (plNames.length>0) { %>
+            <li><%= plNames[0]  %></li>
+            <li><%= plNames[1]  %></li>
+            <li><%= plNames[2]  %></li>
+            <li><%= plNames[3]  %></li>
+            <li><%= plNames[4]  %></li>
+           <% }else {%>
+            <p>No data available</p>
+            <% } %> -->
+            <!-- running a loop  -->
+            <% if (plNames.length>0) { %>
+                <%  for(let i=0; i<plNames.length; i++) { %>
+                    <li><%= plNames[i]  %></li>
+                    <% } %>
+            <% }else {%>
+                <p>No data available</p>
+            <% } %> 
+
+        </ul>
+    </main>
+    
+    <%- include("layout/footer")  %>
+</body>
+</html>
